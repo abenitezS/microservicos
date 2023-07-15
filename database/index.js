@@ -23,11 +23,11 @@ const { Character, Film, Planet } = require("./src/database")
 
 Planet.list().then((res) => console.log(res))
 Planet.get(6).then((res) => console.log(res))
-Planet.insert({
-  _id: "150",
-  name: "universe loose",
-  climate: "cold",
-}).then((res) => console.log(res))
+// Planet.insert({
+//   _id: "150",
+//   name: "universe loose",
+//   climate: "cold",
+// }).then((res) => console.log(res))
 
 server.listen(8004, () => {
   console.log("Database service on PORT 8004")
