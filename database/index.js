@@ -1,4 +1,4 @@
-const server = require("./src/routes/server")
+const server = require("./src/server")
 const { Character, Film, Planet } = require("./src/database")
 
 //Character.list().then((res) => console.log(res))
@@ -21,8 +21,8 @@ const { Character, Film, Planet } = require("./src/database")
 //   director: "Facu Rollero",
 // }).then((res) => console.log(res))
 
-Planet.list().then((res) => console.log(res))
-Planet.get(6).then((res) => console.log(res))
+// Planet.list().then((res) => console.log(res))
+// Planet.get(6).then((res) => console.log(res))
 // Planet.insert({
 //   _id: "150",
 //   name: "universe loose",

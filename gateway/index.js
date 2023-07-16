@@ -7,6 +7,14 @@ const app = express()
 app.use(morgan("dev"))
 
 app.use(
+  "/database",
+  createProxyMiddleware({
+    target: "http://database:8004",
+    changeOrigin: true,
+  })
+)
+
+app.use(
   "/characters",
   createProxyMiddleware({
     target: "http://characters:8001",
@@ -27,6 +35,7 @@ app.use(
     changeOrigin: true,
   })
 )
+
 app.listen(8000, () => {
   console.log("Gasteway on port 8000")
 })
