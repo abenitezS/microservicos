@@ -14,7 +14,7 @@ services:
     restart: always
     build: ./characters
     ports:
-      - ":8001"
+      - "8001:8001"
 
 
   films:
@@ -22,7 +22,7 @@ services:
     restart: always
     build: ./films
     ports:
-      - ":8002"
+      - "8002:8002"
 
 
   planets:
@@ -30,7 +30,7 @@ services:
    restart: always
    build: ./planets
    ports:
-     - ":8003"
+     - "8003:8003"
 
 
   database:
@@ -38,5 +38,5 @@ services:
     restart: always
     build: ./database
     ports:
-      - ":8004"
+      - "8004:8004"
                                     
