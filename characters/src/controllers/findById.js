@@ -2,7 +2,8 @@ const Character = require("../data")
 const { response } = require("../utils")
 
 module.exports = async (req, res) => {
-  const newCharacter = await Character.create(req.body)
+  const { id } = req.params
+  const foundCharacter = await Character.findById(id)
 
-  response(res, 201, newCharacter)
+  response(res, 200, foundCharacter)
 }
